@@ -1,0 +1,15 @@
+@import 'src/styles/variables/colors';
+
+.login-form {
+  padding: 0 15px;
+  border-radius: 10px;
+  background-color: $card-color;
+
+  .form-label {
+    flex-direction: row;
+
+    input {
+      margin-left: 5px;
+    }
+  }
+}

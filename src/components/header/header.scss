@@ -1,0 +1,36 @@
+@import 'src/styles/variables/colors';
+@import 'src/styles/mixins/fluid-type';
+
+.main-header {
+
+  .nav-bar {
+    width: 100vw;
+    padding: 10px;
+    overflow: hidden;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: $nav-color;
+
+    > * {
+      flex-direction: row;
+    }
+
+    .nav-links {
+      margin-right: 10px;
+
+      > * {
+        display: inline;
+      }
+    }
+
+    .avatar-div .user-avatar {
+      margin-right: 10px;
+    }
+  }
+
+  .headline {
+    margin: 10px;
+    text-decoration: underline;
+    @include fluid-type(font-size, 320px, 1400px, 30px, 50px);
+  }
+}

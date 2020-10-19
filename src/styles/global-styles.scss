@@ -1,0 +1,59 @@
+@import 'src/styles/css-reset/css_reset';
+
+@import 'src/styles/variables/colors';
+@import 'src/styles/variables/font-bank';
+
+@import 'src/styles/mixins/fluid-type';
+@import 'src/styles/mixins/scrollbars-buffed';
+@import 'src/styles/mixins/breakpoint';
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+* {
+  font-family: $main-font;
+}
+
+.headline {
+  font-family: $headline-font;
+}
+
+code {
+  font-family: $code-font;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: $white;
+  @include fluid-type(font-size, 320px, 1400px, 16px, 30px);
+  @include scrollbars-buffed(.5em);
+}
+
+.app {
+  height: 100vh;
+  @include fluid-type(margin-left margin-right, 320px, 1400px, 10px, 100px);
+}
+
+// hide or show different unique displays
+@include breakpoint(tablet) {
+  .mobile-container {
+    display: none !important;
+  }
+
+  .set-gig-container {
+    display: flex !important;
+  }
+
+  .song-container {
+    display: grid !important
+  }
+}

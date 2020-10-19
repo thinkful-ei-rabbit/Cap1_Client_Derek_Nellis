@@ -1,0 +1,40 @@
+@import 'src/styles/variables/colors';
+@import 'src/styles/mixins/fluid-type';
+
+.mobile-card {
+  width: 100%;
+  margin: 10px;
+  padding: 10px 0;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: $card-color;
+
+  .mobile-song-title .button,
+  .mobile-card-title .button {
+    position: absolute;
+    @include fluid-type(right, 320px, 767px, 25px, 65px);
+  }
+
+  .mobile-song-title {
+    margin-bottom: 10px;
+    flex-direction: row;
+
+    .button {
+      transform: translateY(-6px);
+      @include fluid-type(font-size, 320px, 767px, 12px, 15px);
+    }
+  }
+
+  .mobile-card-title {
+    flex-direction: row;
+
+    .button {
+      transform: translateY(-10px);
+      @include fluid-type(font-size, 320px, 767px, 16px, 18px);
+    }
+  }
+
+  .add-song .button {
+    @include fluid-type(font-size, 320px, 767px, 12px, 15px);
+  }
+}
